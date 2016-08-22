@@ -267,6 +267,48 @@ function generate_code(){
 }
 
 /*
+ * Set the previous and next actions for the helping dialog buttons
+ */
+function set_help_carousel_buttons(current_lnk){
+    var next = '';
+    var previous = '';
+    switch(current_lnk){
+        case 'lnk_help_connection':
+            next = 'lnk_help_rpc';
+            previous = '';
+            break;
+        case 'lnk_help_rpc':
+            next = 'lnk_help_generate_code';
+            previous = 'lnk_help_connection';
+            break;
+        case 'lnk_help_generate_code':
+            next = 'lnk_help_questions';
+            previous = 'lnk_help_rpc';
+            break;
+        case 'lnk_help_questions':
+            next = '';
+            previous = 'lnk_help_generate_code';
+            break;
+    }
+    if (previous == ''){
+        $('#btn_help_previous').css('display','none')
+    }
+    else{
+        $('#btn_help_previous').css('display','')
+    }
+    if (next == ''){
+        $('#btn_help_next').css('display','none')
+    }
+    else{
+        $('#btn_help_next').css('display','')
+    }
+    $('#btn_help_previous').attr('onclick','$("#' + previous + '").click()')
+    $('#btn_help_next').attr('onclick','$("#' + next + '").click()')
+}
+
+
+
+/*
  * Format a xml string to be readable for humans
 */
 function formatXml(xml) {
