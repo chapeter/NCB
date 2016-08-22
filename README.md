@@ -1,10 +1,12 @@
 **NetConf Browser**
 
 This web tool allows you to run RPC calls to NetConf servers. 
-It will show you the response and is also able to generate the python code for that specific call.
+It will show you the reply and is also able to generate the python code for that specific call.
  
 Runs on top of a Flask Application and uses Javascript (Sijax) and other constructs to create a simple HTML
 application that can be deployed in a production environment using Apache/NGINX with WSGI.
+
+HTML user interface works better in Chrome and Firefox
 
 Contacts:
 
@@ -24,7 +26,7 @@ install the packages in the requirements file.
 `(virtualenv) % pip install -r requirements.txt
 `
 
-For security you should change the default flask secret key for this project:
+For security reasons you should change the default flask secret key for this project:
 
 Inside this project
 Go to app -> __init__
@@ -46,5 +48,5 @@ After creation, replace the cert and key file within the project.
 To run the the application just execute the run.py file.
 E.g. for a linux machine will be sudo python run.py
 
-If you need to make the application visible outside your computer, change the run.py file with your own
- IP. You can also change the port that the application will be listening.
+If you need to make the application visible outside your computer, change the run.py file with your given
+ IP. You can also change the port that the application will be listening and the protocol (http or https) from the same file.

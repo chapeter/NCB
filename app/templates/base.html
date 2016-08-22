@@ -49,7 +49,7 @@
 
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                     <li class="dropdown">
+                    <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                            aria-expanded="false">System <span class="caret"></span></a>
                         <ul class="dropdown-menu">
@@ -59,8 +59,9 @@
                             <li><a target="blank" href="https://tools.ietf.org/html/rfc6241">NetConf RFC</a></li>
                         </ul>
                     </li>
-
-                    <img class="navbar-logo" src="/static/images/CiscoLogoWhite.png">
+                    <li>
+                        <img class="navbar-logo" src="/static/images/CiscoLogoWhite.png">
+                    </li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
@@ -93,6 +94,10 @@
 <script type="text/javascript" src="/static/js/highlight.min.js"></script>
 <script src="/static/js/site.js"></script>
 <script>
+
+/*
+ * To be executed when all html files that inherit from this one are loaded within a browser
+ */
 $().ready(function() {
     // validations
     $("#tool_form").validate({
@@ -106,7 +111,13 @@ $().ready(function() {
 	});
 	// Copy to clipboard
 	new Clipboard('#btn_copy_code');
+
+	// Add style to generated python code
+	$('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+    });
 });
+
 
 
 
