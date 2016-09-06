@@ -72,6 +72,8 @@ class NetConfHandler(BaseHandler):
             object_response.script("create_notification('Something went wrong', '" + str(e).replace("'", "").
                                    replace('"', '').replace("\n", "")[0:100] + "', 'danger', 0);")
 
+            # Reset controls
+            object_response.script("disconnect();")
             # Print in console the traceback error
             print print_exc()
         finally:

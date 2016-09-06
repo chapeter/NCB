@@ -157,6 +157,7 @@ function disconnect(){
     // Change get_capabilities button text and behaviour
     $('#btn_get_capabilities').html('Connect');
     $('#btn_get_capabilities').attr('onclick','get_capabilities();');
+    $('#btn_get_capabilities').prop("disabled", false);
 
     // Change credential panel styles
     $('#div_connection').removeClass('panel-success');
