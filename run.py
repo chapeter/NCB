@@ -24,7 +24,7 @@ To change the default https protocol for http, remove the ssl_context parameter 
 __author__ = 'Santiago Flores Kanter (sfloresk@cisco.com)'
 
 # IP and PORT constants. The following values will be use to start the web server
-IP = '127.0.0.1'
+IP = '0.0.0.0'
 PORT = 5008
 
 # Create a context with https key and certificates located in the local project directory
