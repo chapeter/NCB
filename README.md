@@ -11,9 +11,13 @@ HTML user interface works better in Chrome and Firefox
 Contacts:
 
 * Santiago Flores ( sfloresk@cisco.com )
+**Container Installation**
 
+~# docker pull sfloresk/ncb
+~# docker run -d -p 4443:5008 --name netbrowser sfloresk/ncb
+Go to https://0.0.0.0:4443 
 
-**Installation**
+**Source Installation**
 
 As this is a Flask application you will need to either integrate the application in your production environment or you can
 get it operational in a virtual environment on your computer. In the distribution is a requirements.txt file that you can
@@ -50,3 +54,4 @@ E.g. for a linux machine will be sudo python run.py
 
 If you need to make the application visible outside your computer, change the run.py file with your given
  IP. You can also change the port that the application will be listening and the protocol (http or https) from the same file.
+
