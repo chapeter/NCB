@@ -15,7 +15,9 @@ Contacts:
 **Container Installation**
 
 ~# docker pull sfloresk/ncb
-~# docker run -d -p 4443:5008 --name netbrowser sfloresk/ncb
+
+~# docker run -d -p 4443:5008 --name netbrowser sfloresk/
+
 Go to https://0.0.0.0:4443 
 
 **Source Installation**
