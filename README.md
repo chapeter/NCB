@@ -16,7 +16,7 @@ Contacts:
 
 ~# docker pull sfloresk/ncb
 
-~# docker run -d -p 4443:5008 --name netbrowser sfloresk/
+~# docker run -d -p 4443:5008 --name netbrowser sfloresk/ncb
 
 Go to https://0.0.0.0:4443 
 
